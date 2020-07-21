@@ -8,8 +8,8 @@ const Wrapper = styled.button`
   ${shape}
 `;
 
-const Button = ({ text, onClick }) => {
-  return <Wrapper onClick={onClick}>{text}</Wrapper>;
+const Button = ({ children, onClick }) => {
+  return <Wrapper onClick={onClick}>{children}</Wrapper>;
 };
 
 export default Button;

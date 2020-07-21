@@ -4,7 +4,7 @@ import Button from "components/Button";
 
 describe("Button", () => {
   test("should display text", () => {
-    const { container } = render(<Button text="We Salute You!" />);
+    const { container } = render(<Button>We Salute You!</Button>);
 
     getByText(container, "We Salute You!");
   });
@@ -14,7 +14,7 @@ describe("Button", () => {
   test("should handle click events", () => {
     const onClickMock = jest.fn();
     const { container } = render(
-      <Button text="Click me, maybe?" onClick={onClickMock} />
+      <Button onClick={onClickMock}>Click me, maybe?</Button>
     );
     const component = container.firstChild;
 
@@ -25,7 +25,7 @@ describe("Button", () => {
 });
 
 test("should make text uppercase", () => {
-  const { container } = render(<Button text="We Salute You!" />);
+  const { container } = render(<Button>We Salute You!</Button>);
   const component = getByText(container, "We Salute You!");
 
   expect(component).toHaveStyleRule("text-transform", "uppercase");
