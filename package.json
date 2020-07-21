@@ -11,9 +11,7 @@
     "build": "rollup -c",
     "prepublishOnly": "rm -rf lib && npm run build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-    "docs:build": "styleguidist build",
-    "predeploy": "npm run docs:build",
-    "deploy": "gh-pages -d dist-docs"
+    "docs:build": "styleguidist build"
   },
   "files": [
     "/lib"
