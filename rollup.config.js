@@ -4,6 +4,7 @@ import resolve from "rollup-plugin-node-resolve";
 import external from "rollup-plugin-peer-deps-external";
 import { uglify } from "rollup-plugin-uglify";
 import { terser } from "rollup-plugin-terser";
+import json from "@rollup/plugin-json";
 
 import packageJSON from "./package.json";
 const input = "./src/index.js";
@@ -19,6 +20,7 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
@@ -35,6 +37,7 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
@@ -59,6 +62,7 @@ export default [
       },
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
@@ -81,6 +85,7 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
@@ -100,6 +105,7 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
@@ -117,6 +123,7 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      json(),
       babel({
         exclude: "node_modules/**",
       }),
